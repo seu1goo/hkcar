@@ -1,0 +1,944 @@
+@charset "utf-8";
+
+/* common */
+html {
+  font-size: 10px;
+}
+
+body {
+  font: 1.5rem 'Lato', 'Noto Sans KR', sans-serif;
+  letter-spacing: -0.08em;
+  line-height: 1.4;
+  color: #555;
+  overflow-x: hidden;
+}
+
+section {
+  margin-bottom: 6em;
+}
+
+.inner {
+  position: relative;
+  width: 1360px;
+  margin: 0 auto;
+}
+
+.btn {
+  display: block;
+  width: 9em;
+  height: 2.6em;
+  background-color: #6293D9;
+  border: 2px solid #6293D9;
+  border-radius: 0.6em;
+  box-sizing: border-box;
+  font-size: 1.7rem;
+  font-weight: 600;
+  text-align: center;
+  line-height: 2.6em;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #fff;
+  color: #6293D9;
+}
+
+.btn--white {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.btn--white:hover {
+  background-color: #fff;
+  color: #3f5f8b;
+}
+
+.titArea {
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+.titArea h4 {
+  margin-bottom: 0.1em;
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #0d1b25;
+}
+
+.titArea p {
+  font-size: 1.9rem;
+  font-weight: 500;
+  color: #888;
+}
+
+/* show */
+.back-to-position {
+  opacity: 0;
+  transition: 1s;
+}
+
+.back-to-position.to-top {
+  transform: translate(0, 80px);
+}
+
+.back-to-position.to-bottom {
+  transform: translate(0, -80px);
+}
+
+.back-to-position.to-right {
+  transform: translate(-150px, 0);
+}
+
+.back-to-position.to-left {
+  transform: translate(150px, 0);
+}
+
+.show .back-to-position {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.show .back-to-position.delay-0 {
+  transition-delay: 0s;
+}
+
+.show .back-to-position.delay-1 {
+  transition-delay: 0.3s;
+}
+
+.show .back-to-position.delay-2 {
+  transition-delay: 0.6s;
+}
+
+.show .back-to-position.delay-3 {
+  transition-delay: 0.9s;
+}
+
+.show .back-to-position.delay-4 {
+  transition-delay: 1.2s;
+}
+
+.show .back-to-position.delay-5 {
+  transition-delay: 1.5s;
+}
+
+/* header */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6em;
+  padding-top: 1em;
+  z-index: 9;
+}
+
+header h1.logo {
+  box-sizing: border-box;
+  margin: 1em auto;
+}
+
+header h1.logo a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 2rem;
+  line-height: 3em;
+  text-align: center;
+  color: #fff;
+}
+
+header h1.logo a img {
+  height: 100%;
+}
+
+/* mainVisual */
+#mainVisual {
+  width: 100%;
+  height: calc(100vh - 16.6em);
+  margin-bottom: 0;
+  background: linear-gradient(to left, #ddd, #fff);
+}
+
+#mainVisual .inner {
+  height: 100%;
+}
+
+#mainVisual .mainTit {
+  position: absolute;
+  top: 8em;
+}
+
+#mainVisual .mainTit h3 {
+  margin-bottom: 0.4em;
+  font-size: 2.3rem;
+  font-weight: 500;
+  color: #333;
+}
+
+#mainVisual .mainTit h2 {
+  margin-bottom: 0.6em;
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #3f5f8b;
+}
+
+#mainVisual .mainTit p {
+  font-size: 1.9rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #666;
+}
+
+#mainVisual article .txtBox {
+  text-align: right;
+}
+
+#mainVisual article .txtBox h3 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #0d1b25;
+}
+
+#mainVisual article .txtBox h4 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: #666;
+}
+
+#mainVisual .mainAvante {
+  position: absolute;
+  top: 60%;
+  left: 22%;
+  z-index: 3;
+}
+
+#mainVisual .mainAvante .txtBox {
+  position: absolute;
+  top: -3.2em;
+  right: 10em;
+}
+
+#mainVisual .mainAvante figure {
+  width: 38em;
+}
+
+#mainVisual .mainAvante figure img {
+  width: 100%;
+}
+
+#mainVisual .mainPalisade {
+  position: absolute;
+  top: 43%;
+  right: 0;
+}
+
+#mainVisual .mainPalisade .txtBox {
+  position: absolute;
+  top: -3em;
+  right: 0;
+}
+
+#mainVisual .mainPalisade figure {
+  width: 40em;
+}
+
+#mainVisual .mainPalisade figure img {
+  width: 100%;
+}
+
+#mainVisual .fade-in {
+  opacity: 0;
+}
+
+/* counForm */
+#counForm {
+  width: 100%;
+  background-color: #0d1b25;
+}
+
+#counForm form {
+  width: 100%;
+  padding: 2em 0;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+#counForm form .topForm {
+  margin-bottom: 2em;
+}
+
+#counForm form .topForm input {
+  padding: 0.5em;
+  background-color: transparent;
+  border: 1px solid #f4f4f4;
+  border-radius: 3px;
+  font-size: 1.6rem;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+#counForm form .topForm input::placeholder {
+  color: #bbb;
+}
+
+#counForm form .topForm label {
+  display: inline-block;
+  width: 3.5em;
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+#counForm form .topForm .infoForm {
+  float: left;
+  width: 45%;
+  margin-right: 2%;
+}
+
+#counForm form .topForm .infoForm div {
+  margin-bottom: 0.6em;
+}
+
+#counForm form .topForm .infoForm div:last-child {
+  margin-bottom: 0;
+}
+
+#counForm form .topForm .infoForm input {
+  width: 89%;
+  height: 2em;
+}
+
+#counForm form .topForm .detailForm {
+  float: left;
+  width: 52.7%;
+  height: 7.7em;
+}
+
+#counForm form .topForm .detailForm textarea {
+  width: 100%;
+  height: 100%;
+  padding: 0.6em;
+  background-color: #22344D;
+  border: 1px solid #22344D;
+  border-radius: 3px;
+  font-size: 1.6rem;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+#counForm form .topForm .detailForm textarea::placeholder {
+  color: #f4f4f4;
+}
+
+#counForm form .bottomForm {
+  float: right;
+}
+
+#counForm form .bottomForm>div {
+  float: left;
+}
+
+#counForm form .bottomForm .checks {
+  padding-top: 1em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+#counForm form .bottomForm .checks input {
+  margin-right: 0.2em;
+}
+
+#counForm form .bottomForm .checks label {
+  display: inline-block;
+  margin-right: 0.4em;
+  font-size: 1.8rem;
+  color: #eee;
+}
+
+#counForm form .bottomForm .checks a {
+  font-size: 1.4rem;
+  text-decoration: underline;
+  color: #ccc;
+}
+
+#counForm form .bottomForm .checks a:hover {
+  color: #fff;
+}
+
+#counForm form .bottomForm .btnArea {
+  margin-left: 2em;
+}
+
+/* cumulativeList */
+#cumulativeList .titArea {
+  float: left;
+  width: 15%;
+  margin-right: 2em;
+  text-align: left;
+}
+
+#cumulativeList .titArea h4 {
+  font-size: 6rem;
+  font-weight: 600;
+  color: #3f5f8b;
+}
+
+#cumulativeList .titArea p {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+}
+
+#cumulativeList article {
+  float: left;
+  width: 40.2%;
+}
+
+#cumulativeList article.cumuEstimate {
+  margin-right: 2%;
+}
+
+#cumulativeList article .titBox h5 {
+  margin-bottom: 0.4em;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+#cumulativeList article .txtBox {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 15em;
+  background: no-repeat center / cover;
+}
+
+#cumulativeList article.cumuEstimate .txtBox {
+  background-image: url(../_img/cumuestimate_bg.png);
+}
+
+#cumulativeList article.cumuSales .txtBox {
+  background-image: url(../_img/cumusales_bg.png);
+}
+
+#cumulativeList article .txtBox:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+#cumulativeList article .txtBox h2 {
+  position: relative;
+  font-size: 6rem;
+  font-weight: 700;
+  z-index: 1;
+}
+
+#cumulativeList article.cumuEstimate .txtBox h2 {
+  color: #fff;
+}
+
+#cumulativeList article.cumuSales .txtBox h2 {
+  color: #fff;
+}
+
+/* registerList */
+#registerList {
+  width: 100%;
+}
+
+#registerList .titArea {
+  float: left;
+  width: 15%;
+  margin-right: 2em;
+  text-align: left;
+}
+
+#registerList .titArea h4 {
+  font-size: 6rem;
+  font-weight: 600;
+  color: #3f5f8b;
+}
+
+#registerList .titArea p {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+}
+
+#registerList article {
+  float: left;
+  width: 40.2%;
+  margin-right: 2%;
+  box-sizing: border-box;
+}
+
+#registerList article:last-child {
+  margin-right: 0;
+}
+
+#registerList article h5 {
+  margin-bottom: 0.4em;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+#registerList article>.roofSell>ul {
+  width: 100%;
+}
+
+#registerList article>.roofSell>ul>li {
+  width: 100%;
+  padding: 0.6em;
+  margin-bottom: 0.4em !important;
+  border-radius: 3px;
+  font-size: 1.7rem;
+  box-sizing: border-box;
+}
+
+#registerList .register>.roofSell>ul>li {
+  border: 1px solid #4184A3;
+}
+
+#registerList .regiCoun>.roofSell>ul>li {
+  border: 1px solid #4150A3;
+}
+
+#registerList article .roofSell>ul>li>ul>li {
+  float: left;
+}
+
+#registerList article .roofSell>ul>li>ul>li.regiName,
+#registerList article .roofSell>ul>li>ul>li.regiCounName {
+  width: 15%;
+}
+
+#registerList article .roofSell>ul>li>ul>li.regiBrand,
+#registerList article .roofSell>ul>li>ul>li.regiCounBrand {
+  width: 20%;
+}
+
+#registerList article .roofSell>ul>li>ul>li.regiCar,
+#registerList article .roofSell>ul>li>ul>li.regiCounCar {
+  width: 25%;
+}
+
+#registerList article .roofSell>ul>li>ul>li:last-child {
+  float: right;
+  padding: 0.2em 0.8em;
+  border: 1px solid;
+  border-radius: 3px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  box-sizing: border-box;
+}
+
+#registerList article .roofSell>ul>li>ul>li.regiBtn {
+  background-color: #4184A3;
+  color: #fff;
+}
+
+#registerList article .roofSell>ul>li>ul>li.regiCounBtn {
+  background-color: #3f4e78;
+  color: #fff;
+}
+
+/* banner */
+#banner {
+  position: relative;
+  width: 100%;
+  height: 27em;
+  background-color: #eee;
+}
+
+#banner .swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+#banner .swiper-slide {
+  position: relative;
+  width: 100%;
+  background: no-repeat center / cover;
+  z-index: 1;
+}
+
+#banner .swiper-slide:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+#banner .banner01 {
+  background-image: url(../_img/banner01.png);
+}
+
+#banner .banner02 {
+  background-image: url(../_img/banner02.png);
+}
+
+#banner .banner03 {
+  background-image: url(../_img/banner03.png);
+}
+
+#banner .txtArea {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  z-index: 3;
+}
+
+#banner .txtArea h2 {
+  margin-bottom: 0.4em;
+  font-size: 3.8rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+#banner .txtArea p {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #f4f4f4;
+}
+
+#banner .swiper-pagination {
+  bottom: 6%;
+}
+
+#banner .swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  background: transparent;
+  border: 4px solid #fff;
+  box-sizing: border-box;
+  opacity: 0.6;
+}
+
+#banner .swiper-pagination-bullet-active {
+  background: #fff;
+  opacity: 1;
+}
+
+#banner .swiper-pagination-bullet:last-child {
+  margin-right: 0;
+}
+
+/* carList */
+#carList .carBtn {
+  width: 100%;
+  margin-bottom: 0.4em;
+}
+
+#carList .carBtn li {
+  float: left;
+  width: calc((100% - 8em) / 5);
+  height: 6em;
+  margin: 0 2em 2em 0;
+  border-radius: 0.5em;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  transition: all 0.3s;
+}
+
+#carList .carBtn li.active {
+  border: 1px solid #0d1b25;
+} 
+
+#carList .carBtn li:nth-child(5),
+#carList .carBtn li:nth-child(10) {
+  margin-right: 0;
+}
+
+#carList .carBtn li a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+#carList .carBtn li a:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(13, 27, 37, 0.9);
+  border-radius: 0.25em;
+  font-size: 1.9rem;
+  font-weight: 500;
+  text-align: center;
+  line-height: 4.6em;
+  color: #fff;
+  opacity: 0;
+  box-sizing: border-box;
+  transition: all 0.3s;
+}
+
+#carList .carBtn li a:hover:after {
+  opacity: 1;
+}
+
+#carList .carBtn li.btnHot a:hover:after {
+  content: '현대카의 추천차종 [HOT]';
+}
+
+#carList .carBtn li.btnHyundai a:hover:after {
+  content: '현대 [Hyundai]';
+}
+
+#carList .carBtn li.btnKia a:hover:after {
+  content: '기아 [Kia]';
+}
+
+#carList .carBtn li.btnSamsung a:hover:after {
+  content: '르노삼성 [Renault Samsung]';
+}
+
+#carList .carBtn li.btnGenesis a:hover:after {
+  content: '제네시스 [Genesis]';
+}
+
+#carList .carBtn li.btnShevrolet a:hover:after {
+  content: '쉐보레 [Shevrolet]';
+}
+
+#carList .carBtn li.btnBmw a:hover:after {
+  content: '비엠더블유 [BMW]';
+}
+
+#carList .carBtn li.btnBenz a:hover:after {
+  content: '벤츠 [Benz]';
+}
+
+#carList .carBtn li.btnAudi a:hover:after {
+  content: '아우디 [Audi]';
+}
+
+#carList .carBtn li.btnVolkswagen a:hover:after {
+  content: '폭스바겐 [Volkswagen]';
+}
+
+#carList .carBtn li a img {
+  height: 60%;
+}
+
+#carList .carBtn li.btnKia a img {
+  height: 30%;
+}
+
+#carList .carBtn li.btnHot a img,
+#carList .carBtn li.btnSamsung a img,
+#carList .carBtn li.btnGenesis a img,
+#carList .carBtn li.btnShevrolet a img,
+#carList .carBtn li.btnAudi a img {
+  height: 50%;
+}
+
+#carList .carContent {
+  width: 100%;
+}
+
+#carList .carContent ul li {
+  float: left;
+  width: calc((100% - 6em) / 4);
+  padding: 1em;
+  margin: 0 2em 2em 0;
+  border: 2px solid #ddd;
+  border-radius: 0.8em;
+  box-sizing: border-box;
+}
+
+#carList .carContent ul li:nth-child(4),
+#carList .carContent ul li:nth-child(8),
+#carList .carContent ul li:nth-child(12) {
+  margin-right: 0;
+}
+
+#carList .carContent ul li figure {
+  position: relative;
+  width: 100%;
+  height: 8em;
+  margin-bottom: 1em;
+}
+
+#carList .carContent ul li figure img {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 7.5em;
+}
+
+#carList .carContent ul li h5 {
+  margin-bottom: 0.25em;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #333;
+}
+
+#carList .carContent ul li table {
+  width: 100%;
+  margin-bottom: 1em;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+
+#carList .carContent ul li table tr:nth-child(even) {
+  background-color: #eee;
+}
+
+#carList .carContent ul li table tr th,
+#carList .carContent ul li table tr td {
+  padding: 0.4em;
+}
+
+#carList .carContent ul li table tr th {
+  font-weight: 500;
+}
+
+#carList .carContent ul li .btnArea {
+  float: right;
+}
+
+/* iconArea */
+#iconArea ul li {
+  float: left;
+  width: 20%;
+}
+
+#iconArea ul li figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 7em;
+  margin: 0 auto 1em;
+}
+
+#iconArea ul li figure img {
+  height: 100%;
+}
+
+#iconArea ul li h5 {
+  margin-bottom: 0.4em;
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+#iconArea ul li p {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* footer */
+footer {
+  width: 100%;
+  padding: 2em 0;
+  background-color: #eee;
+}
+
+footer .footLogo {
+  float: left;
+  width: 13em;
+  height: 4em;
+  margin-right: 2em;
+  color: #fff;
+}
+
+footer .footLogo a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+footer .footLogo a img {
+  width: 100%;
+}
+
+footer .footCopy {
+  float: left;
+}
+
+footer .footCopy li {
+  margin-bottom: 0.5em;
+  font-size: 1.4rem;
+}
+
+footer .footCopy li span {
+  display: inline-block;
+  margin-right: 0.5em;
+  font-weight: 500;
+  color: #333;
+}
+
+/* side */
+#side {
+  position: relative;
+  margin-bottom: 0;
+  z-index: 9999;
+}
+
+#side .kakao {
+  position: fixed;
+  top: 5%;
+  right: 0;
+  width: 10em;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+#side .kakao a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#side .kakao a img {
+  width: 100%;
+}
+
+#side .mob_kakao {
+  display: none;
+}
+
+#side .topBtn {
+  position: fixed;
+  bottom: 5%;
+  right: 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4em;
+  height: 4em;
+  background-color: #3f5f8b;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
